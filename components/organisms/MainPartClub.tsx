@@ -32,6 +32,7 @@ const MainPageClub = () => {
 			<div className=' absolute right-0 top-[238px]'>
 				<Post
 					title='Wilkommen im Klub'
+					postClassName='w-[450px]'
 					content='Das Klubhaus ist ein Ort für Menschen mit einem aktiven und bewussten Lebensstil, die sich hier in lockerer Atmosphäre treffen und kennenlernen können. Hier findet man alles rund um die Passion des Velo- und Laufsports – vom Shop mit der richtigen Bekleidung, über die Werkstatt für einen Service bis zu gemeinsamen Events. Das kulinarische Angebot bietet die perfekte Gelegenheit für den lockeren Austausch unter Sportbegeisterten. Komm vorbei und erlebe das Klubhaus.'
 				/>
 			</div>

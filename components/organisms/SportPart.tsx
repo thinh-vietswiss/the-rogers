@@ -1,15 +1,16 @@
 import Post from '@/components/molecules/Post'
-import MenuMol from '@/components/molecules/Menu'
-import Logo from '@/components/atoms/svg/logo'
 import Image from 'next/image'
 import Typography from '../atoms/Common/Typography'
-import Button from '../atoms/Common/Button'
-import ButtonPlus from '../atoms/svg/buttonPlus'
-import Ellipse from '../atoms/Ellipse'
 import MenuFood from '../molecules/MenuFood'
-import dynamic from 'next/dynamic'
-const ImageSlider = dynamic(() => import('../molecules/ImageSlider'), { ssr: false })
-const SportPart = () => {
+import ImageSlider from '../molecules/ImageSlider'
+import { IImageData } from '@/types'
+import ListSponsorLogo from '../molecules/ListSponsorLogo'
+
+interface SportPart {
+	sponsorLogoData: IImageData[]
+}
+
+const SportPart: React.FC<SportPart> = ({ sponsorLogoData }) => {
 	return (
 		<div className=' mx-[90px]  relative'>
 			<div className='absolute top-[646px] left-[110px]'>
@@ -125,6 +126,9 @@ const SportPart = () => {
 					titleClassName='text-6xl not-italic font-normal leading-[65px] tracking-[1.2px]'
 					content='Im internen Fashion-Shop finden modebewusste Sportlerinnen und Sportler eine exklusive Auswahl an namhaften Brands mit hochwertigen Produkten für den aktiven Lifestyle: entspanntes Shopping in besonders angenehmem Ambiente und mit fachkundiger Modeberatung.'
 				/>
+			</div>
+			<div className='absolute top-[3846px] left-[112px]'>
+				<ListSponsorLogo listSponsor={sponsorLogoData} />
 			</div>
 		</div>
 	)

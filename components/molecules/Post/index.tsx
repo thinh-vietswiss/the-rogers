@@ -12,7 +12,7 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = (props) => {
 	return (
-		<div className={`w-[450px] ${props.postClassName}`}>
+		<div className={`${props.postClassName}`}>
 			<Typography
 				textSize='heading5'
 				className={`pb-7 font-abril-fatface ${props.titleClassName}`}
