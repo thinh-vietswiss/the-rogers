@@ -1,10 +1,10 @@
-import Link from '@/components/atoms/Common/Link'
+import { clsx } from 'clsx'
 import Typography from '@/components/atoms/Common/Typography'
-import Logo from '@/components/atoms/Logo'
 import React from 'react'
 interface PostProps {
 	title?: any
-	content: string
+	content?: any
+	contentCustom?: any
 	titleClassName?: string
 	postClassName?: string
 	contentClassName?: string
@@ -12,14 +12,15 @@ interface PostProps {
 
 const Post: React.FC<PostProps> = (props) => {
 	return (
-		<div className={`${props.postClassName}`}>
+		<div className={props.postClassName}>
 			<Typography
 				textSize='heading5'
-				className={`pb-7 font-abril-fatface ${props.titleClassName}`}
+				className={clsx(`pb-7 font-abril-fatface `, props.titleClassName)}
 			>
 				{props.title}
 			</Typography>
-			<Typography textSize='base' className={`${props.contentClassName}`}>
+			{props.contentCustom}
+			<Typography textSize='base' className={props.contentClassName}>
 				{props.content}
 			</Typography>
 		</div>

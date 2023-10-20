@@ -6,6 +6,8 @@ import ImageSlider from '../molecules/ImageSlider'
 import EventAndVacations from '../organisms/EventAndVacations'
 import ListBlogs from '../organisms/ListBlogs'
 import blogData from '@/data/blogData.json'
+import NewsPart from '../organisms/NewsPart'
+import Footer from '../organisms/Footer'
 const HomeTemplate = () => {
 	return (
 		<div className='lg:max-w-[1440px] lg:mx-auto max-w-full'>
@@ -20,6 +22,8 @@ const HomeTemplate = () => {
 				</div>
 				<EventAndVacations />
 				<ListBlogs blogData={blogData} />
+				<NewsPart />
+				<Footer />
 			</div>
 		</div>
 	)
